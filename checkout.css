@@ -1,0 +1,33 @@
+#payment{
+    width: 30%;
+    height: 400px;
+    /* border: 1px solid red; */
+    margin: auto;
+    background-color: teal;
+}
+#btn{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+#payment>div{
+    margin-left: 120px;
+    margin-top: 20px;
+}
+#payment>input{
+    margin-left: 120px;
+}
+h1{
+    text-align: center;
+ padding-top: 20px;
+}
+button{
+    padding: 10px;
+}
+button:hover{
+    background-color: black;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    border: 0px;
+}

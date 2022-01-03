@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #main{
+        width: 20%;
+        height: 300px;
+        border: 1px solid black;
+        background-color: teal;
+    }
+    #main>div{
+        margin-left: 20px;
+        margin-top: 10px;
+    }
+    #main>input{
+        margin-left: 20px;
+    }
+    button{
+        margin-top: 20px;
+        margin-left: 70px;
+    }
+    h1{
+        text-align: center;
+    }
+button:hover{
+    background-color: black;
+            color: white;
+            font-size: 20px;
+            text-decoration: none;
+            text-decoration: none;
+            border: 0px;
+}
+</style>
+</head>
+<body>
+  <div id="main">
+      <h1>Login Page</h1>
+    <div>Email</div>
+    <input type="text"  id="email">
+    <div>Password</div>
+    <input type="password" id="password">
+    <br>
+    <button onclick="getFn()">SUBMIT</button>
+  </div>
+</body>
+</html>
+
+<script>
+    var count=0;
+let arr1=JSON.parse(localStorage.getItem("myLocal"))
+    function getFn(){
+      
+let Email=document.getElementById("email").value;
+let Password=document.getElementById("password").value;
+
+if(Email=="admin"&&Password=="admin"){
+    alert("sa")
+}else{
+    for(var i=0;i<arr1.length;i++){
+        if(arr1[i].email==Email&&arr1[i].password==Password){
+            count++
+        }
+    }
+}
+if(count>=1){
+    alert("SucsseFul")
+    window.location.href="index.html"
+}else{
+    alert("Not SucsseFul")
+}
+
+    }
+</script>
